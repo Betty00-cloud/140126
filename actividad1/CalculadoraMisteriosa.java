@@ -1,5 +1,5 @@
 package actividad1;
-
+// Beatriz Pérez
 import java.util.Scanner;
 
 public class CalculadoraMisteriosa {
