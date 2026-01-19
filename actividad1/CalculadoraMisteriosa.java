@@ -1,5 +1,9 @@
 package actividad1;
-// Beatriz Pérez Medrano
+/*
+Clase que implementa una calculadora
+@author Beatriz Pérez Medrano
+@version 1.0
+ */
 import java.util.Scanner;
 
 public class CalculadoraMisteriosa {
@@ -26,13 +30,15 @@ public class CalculadoraMisteriosa {
 				System.out.println("Resultado: " + sumar());
 				break;
 			case 2:
-				System.out.println("Resultado: " + restar(10, 5));
+                // Quito los valores de la resta
+				System.out.println("Resultado: " + restar());
 				break;
 			case 3:
 				System.out.println("Resultado: " + multiplicar());
 				break;
 			case 4:
-				System.out.println("Resultado: " + dividir(10, 0));
+                // Quito los valores de la división
+				System.out.println("Resultado: " + dividir());
 				break;
 			case 5:
 				System.out.println("Resultado: " + calcularPromedio());
@@ -53,34 +59,70 @@ public class CalculadoraMisteriosa {
 
 	}
 
-	public static int sumar() {
+    /**
+     * Opción de suma
+     * @return
+     */
+
+    public static int sumar() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Ingresa el primer número: ");
 		int a = sc.nextInt();
 		System.out.print("Ingresa el segundo número: ");
 		int b = sc.nextInt();
-
-		return a - b;
+        // En vez de restar ponemos una suma
+		return a + b;
 	}
 
-	public static int restar(int a, int b) {
-		return a * b;
+    /**
+     * Opción de resta
+     * @return
+     */
+    // Quitamos valores recibidos para que funcione
+	public static int restar() {
+        //Incluimos toda la parte de sumar excepto el return a restar
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int a = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int b = sc.nextInt();
+        // En vez de multiplicar restamos
+        return a - b;
 	}
 
+    /**
+     * Opción de multiplicar
+     * @return
+     */
 	public static int multiplicar() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Ingresa el primer número: ");
 		int num1 = sc.nextInt();
 		System.out.print("Ingresa el segundo número: ");
 		int num2 = sc.nextInt();
-
-		return num1 + num2;
+    //En vez de sumar multiplicamos
+		return num1 * num2;
 	}
 
-	public static double dividir(double a, double b) {
+    /**
+     * Opción de dividir
+     * @return
+     */
+    // Quitamos valores recibidos para que funcione la división
+	public static double dividir() {
+        //Incluimos toda la parte de sumar excepto el return a dividir
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int a = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int b = sc.nextInt();
 		return a / b;
 	}
 
+    /**
+     * Cálculo del promedio de los numeros
+     * @return
+     */
 	public static double calcularPromedio() {
 		double[] numeros = { 10, 20, 30, 40, 50 };
 		double suma = 0;
@@ -103,3 +145,4 @@ public class CalculadoraMisteriosa {
 	}
 
 }
+
