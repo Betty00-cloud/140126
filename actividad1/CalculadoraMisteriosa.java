@@ -3,6 +3,7 @@ package actividad1;
 Clase que implementa una calculadora
 @author Beatriz Pérez Medrano
 @version 1.0
+Se modificaron 10 cosas
  */
 import java.util.Scanner;
 
